@@ -1,0 +1,87 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const String appTitle = 'List Mahasiswa';
+    return MaterialApp(
+      title: appTitle,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
+          title: const Text(
+            appTitle,
+          ),
+        ),
+        body: const Center(
+            child: Column(
+          children: [
+            ListMhs(
+                nama: 'MUHAMAD YAZID FYZE RAHMAN',
+                nim: 'NIM : ' 'STI202102545'),
+            ListMhs(nama: 'HENDRI HIDAYATULLAH', nim: 'NIM : ' 'STI202102546'),
+            ListMhs(nama: 'RIFKI DWI ARDIANTO', nim: 'NIM : ' 'STI202102552'),
+            ListMhs(nama: 'FAQIH FIKRI RIYANTO', nim: 'NIM : ' 'STI202102553'),
+            ListMhs(nama: 'GIGIH ARYADITA', nim: 'NIM : ' 'STI202102554'),
+            Divider()
+          ],
+        )),
+      ),
+    );
+  }
+}
+
+class ListMhs extends StatelessWidget {
+  const ListMhs({
+    super.key,
+    required this.nama,
+    required this.nim,
+  });
+
+  final String nama;
+  final String nim;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Row(
+        children: [
+          Expanded(
+            /*1*/
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                /*2*/
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 1),
+                  child: Text(
+                    nama,
+                    style: TextStyle(
+                      color: Colors.grey[900],
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Text(
+                  nim,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.grey[800],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
