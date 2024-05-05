@@ -8,6 +8,4 @@ NIM    : STI202102552
 
 Tugas  : Job Sheet 05
 
-https://github.com/rifkidardianto/Jobsheet5_Rifki_DA_STI202102552/blob/main/screenshot/capture.JPG?raw=true
-https://github.com/rifkidardianto/Jobsheet5_Rifki_DA_STI202102552/blob/main/screenshot/capture2.JPG?raw=true
-
+https://raw.githubusercontent.com/rifkidardianto/Jobsheet5_Rifki_DA_STI202102552/main/screenshot/capture.JPG
