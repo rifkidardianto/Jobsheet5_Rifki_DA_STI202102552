@@ -1,7 +1,5 @@
 # flutter_jobsheet5_rifki
 
-flutter_jobsheet5_rifki.
-
 Mata Kuliah : #113 MOBILE PROGRAMMING LANJUT
 
 Nama   : Rifki Dwi Ardianto
