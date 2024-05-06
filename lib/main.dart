@@ -68,7 +68,7 @@ class ListMhs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: highlightBackground ? Colors.blue.withOpacity(0.5) : null,
+        color: highlightBackground ? Colors.green.withOpacity(0.5) : null,
         borderRadius: BorderRadius.circular(10),
       ),
       margin: const EdgeInsets.all(0),
