@@ -20,67 +20,70 @@ class MainApp extends StatelessWidget {
           ),
         ),
         body: const Center(
-            child: Column(
-          children: [
-            ListMhs(
+          child: Column(
+            children: [
+              ListMhs(
                 nama: 'MUHAMAD YAZID FYZE RAHMAN',
-                nim: 'NIM : ' 'STI202102545'),
-            ListMhs(nama: 'HENDRI HIDAYATULLAH', nim: 'NIM : ' 'STI202102546'),
-            ListMhs(nama: 'RIFKI DWI ARDIANTO', nim: 'NIM : ' 'STI202102552'),
-            ListMhs(nama: 'FAQIH FIKRI RIYANTO', nim: 'NIM : ' 'STI202102553'),
-            ListMhs(nama: 'GIGIH ARYADITA', nim: 'NIM : ' 'STI202102554'),
-            Divider()
-          ],
-        )),
+                nim: 'NIM : ' 'STI202102545',
+              ),
+              ListMhs(
+                nama: 'HENDRI HIDAYATULLAH',
+                nim: 'NIM : ' 'STI202102546',
+              ),
+              ListMhs(
+                nama: 'RIFKI DWI ARDIANTO',
+                nim: 'NIM : ' 'STI202102552',
+                highlightBackground: true, // menandai latar belakang
+              ),
+              ListMhs(
+                nama: 'FAQIH FIKRI RIYANTO',
+                nim: 'NIM : ' 'STI202102553',
+              ),
+              ListMhs(
+                nama: 'GIGIH ARYADITA',
+                nim: 'NIM : ' 'STI202102554',
+              ),
+              Divider(),
+            ],
+          ),
+        ),
       ),
     );
   }
 }
 
 class ListMhs extends StatelessWidget {
+  final String nama;
+  final String nim;
+  final bool highlightBackground;
+
   const ListMhs({
     super.key,
     required this.nama,
     required this.nim,
+    this.highlightBackground = false,
   });
-
-  final String nama;
-  final String nim;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(15),
-      child: Row(
-        children: [
-          Expanded(
-            /*1*/
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                /*2*/
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 1),
-                  child: Text(
-                    nama,
-                    style: TextStyle(
-                      color: Colors.grey[900],
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Text(
-                  nim,
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.grey[800],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+    return Container(
+      decoration: BoxDecoration(
+        color: highlightBackground ? Colors.blue.withOpacity(0.5) : null,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      margin: const EdgeInsets.all(0),
+      child: ListTile(
+        title: Text(
+          nama,
+          style: TextStyle(
+              color: Colors.grey[900],
+              fontSize: 20,
+              fontWeight: FontWeight.w600),
+        ),
+        subtitle: Text(
+          nim,
+          style: TextStyle(fontSize: 15, color: Colors.grey[800]),
+        ),
       ),
     );
   }
